@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Abedul</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+    .productos-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 4rem 5%;
+    }
+
+    .productos-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .productos-header h1 {
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: #001c13;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .productos-header p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .productos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .producto-card {
+      background: #ffffff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 28, 19, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .producto-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0, 28, 19, 0.2);
+    }
+
+    .producto-imagen {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .producto-imagen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+      filter: brightness(0.95);
+    }
+
+    .producto-card:hover .producto-imagen img {
+      transform: scale(1.1);
+      filter: brightness(1);
+    }
+
+    .producto-info {
+      padding: 2rem;
+    }
+
+    .producto-categoria {
+      font-size: 0.75rem;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .producto-nombre {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #001c13;
+      margin-bottom: 1rem;
+    }
+
+    .producto-descripcion {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .producto-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .producto-precio {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #001c13;
+    }
+
+    .btn-consultar {
+      background-color: #001c13;
+      color: #ffffff;
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-consultar:hover {
+      background-color: #003d29;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .productos-header h1 {
+        font-size: 2rem;
+      }
+
+      .productos-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="navbar-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="PagFinal.html">Acerca de</a></li>
+        <li><a href="https://wa.me/573022938898?text=Hola,%20me%20gustaría%20hacer%20un%20pedido%20personalizado" target="_blank">Pedido personalizado</a></li>
+      </ul>
+      <form action="#" method="get" class="search-form">
+        <input type="text" placeholder="Buscar..." name="search">
+        <button type="submit">🔍</button>
+      </form>
+    </nav>
+  </header>
+
+  <div class="productos-container">
+    <div class="productos-header">
+      <h1>Nuestros Productos</h1>
+      <p>Muebles de madera hechos a mano con dedicación y calidad premium</p>
+    </div>
+
+    <div class="productos-grid">
+      <!-- Producto 1 -->
+      <div class="producto-card">
+        <div class="producto-imagen">
+          <img src="Mesa.jpeg" alt="Mesa de comedor">
+        </div>
+        <div class="producto-info">
+          <div class="producto-categoria">Comedor</div>
+          <h3 class="producto-nombre">Mesa de Comedor</h3>
+          <p class="producto-descripcion">Mesa elegante de madera maciza, perfecta para reuniones familiares. Acabado premium con diseño minimalista.</p>
+          <div class="producto-footer">
+            <span class="producto-precio">Consultar</span>
+            <a href="https://wa.me/573022938898?text=Hola,%20me%20interesa%20la%20Mesa%20de%20Comedor" target="_blank" class="btn-consultar">Whatsapp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="producto-card">
+        <div class="producto-imagen">
+          <img src="Bar.jpeg" alt="Bar moderno">
+        </div>
+        <div class="producto-info">
+          <div class="producto-categoria">Bar & Cocina</div>
+          <h3 class="producto-nombre">Bar Moderno</h3>
+          <p class="producto-descripcion">Bar contemporáneo con almacenamiento integrado. Ideal para espacios modernos y sofisticados.</p>
+          <div class="producto-footer">
+            <span class="producto-precio">Consultar</span>
+            <a href="https://wa.me/573022938898?text=Hola,%20me%20interesa%20el%20Bar%20Moderno" target="_blank" class="btn-consultar">Whatsapp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto-card">
+        <div class="producto-imagen">
+          <img src="c26975c5287f9e6f0597744bff679858.jpg" alt="Mueble decorativo">
+        </div>
+        <div class="producto-info">
+          <div class="producto-categoria">Decoración</div>
+          <h3 class="producto-nombre">Mueble Decorativo</h3>
+          <p class="producto-descripcion">Pieza única de diseño exclusivo. Combina funcionalidad y estética para espacios distinguidos.</p>
+          <div class="producto-footer">
+            <span class="producto-precio">Consultar</span>
+            <a href="https://wa.me/573022938898?text=Hola,%20me%20interesa%20el%20Mueble%20Decorativo" target="_blank" class="btn-consultar">Whatsapp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="producto-card">
+        <div class="producto-imagen">
+          <img src="Mesa.jpeg" alt="Mesa auxiliar">
+        </div>
+        <div class="producto-info">
+          <div class="producto-categoria">Sala</div>
+          <h3 class="producto-nombre">Mesa Auxiliar</h3>
+          <p class="producto-descripcion">Mesa versátil de diseño elegante. Perfecta para complementar tu sala con estilo.</p>
+          <div class="producto-footer">
+            <span class="producto-precio">Consultar</span>
+            <a href="https://wa.me/573022938898?text=Hola,%20me%20interesa%20la%20Mesa%20Auxiliar" target="_blank" class="btn-consultar">Whatsapp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="producto-card">
+        <div class="producto-imagen">
+          <img src="Bar.jpeg" alt="Estantería moderna">
+        </div>
+        <div class="producto-info">
+          <div class="producto-categoria">Almacenamiento</div>
+          <h3 class="producto-nombre">Estantería Moderna</h3>
+          <p class="producto-descripcion">Sistema de almacenamiento elegante y funcional. Diseño contemporáneo para cualquier ambiente.</p>
+          <div class="producto-footer">
+            <span class="producto-precio">Consultar</span>
+            <a href="https://wa.me/573022938898?text=Hola,%20me%20interesa%20la%20Estantería%20Moderna" target="_blank" class="btn-consultar">Whatsapp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="producto-card">
+        <div class="producto-imagen">
+          <img src="c26975c5287f9e6f0597744bff679858.jpg" alt="Escritorio premium">
+        </div>
+        <div class="producto-info">
+          <div class="producto-categoria">Oficina</div>
+          <h3 class="producto-nombre">Escritorio Premium</h3>
+          <p class="producto-descripcion">Escritorio de alta calidad para tu espacio de trabajo. Diseño ergonómico y elegante.</p>
+          <div class="producto-footer">
+            <span class="producto-precio">Consultar</span>
+            <a href="https://wa.me/573022938898?text=Hola,%20me%20interesa%20el%20Escritorio%20Premium" target="_blank" class="btn-consultar">Whatsapp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
