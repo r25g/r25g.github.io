@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acerca de - Abedul</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+
+  <style>
+    
+    .acerca-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 5%;
+    }
+
+    .acerca-hero {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .acerca-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #001c13;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .acerca-hero p {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .acerca-section {
+      margin-bottom: 5rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: #001c13;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      text-align: center;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 1px;
+      background-color: #001c13;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.4;
+    }
+
+    .section-content {
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.9;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .valores-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .valor-card {
+      text-align: center;
+      padding: 2rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .valor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 28, 19, 0.1);
+    }
+
+    .valor-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.8;
+    }
+
+    .valor-title {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #001c13;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .valor-description {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .historia-content {
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 3rem;
+    }
+
+    .historia-texto {
+      flex: 1;
+    }
+
+    .historia-texto p {
+      margin-bottom: 1.5rem;
+      color: #555;
+      line-height: 1.9;
+    }
+
+    .historia-imagen {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .historia-imagen img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .cta-section {
+      background-color: #001c13;
+      color: #ffffff;
+      padding: 4rem 5%;
+      text-align: center;
+      border-radius: 8px;
+      margin-top: 5rem;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: #ffffff;
+      color: #001c13;
+      padding: 1rem 3rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #f0f0f0;
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 968px) {
+      .acerca-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .historia-content {
+        flex-direction: column;
+      }
+
+      .historia-imagen {
+        max-width: 100%;
+      }
+
+      .valores-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .acerca-hero h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .cta-section h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="navbar-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="PagFinal.html">Acerca de</a></li>
+        <li><a href="https://wa.me/573022938898?text=Hola,%20me%20gustaría%20hacer%20un%20pedido%20personalizado" target="_blank">Pedido personalizado</a></li>
+      </ul>
+      <form action="productos.html" method="get" class="search-form">
+        <input id="buscador" type="text" placeholder="Buscar..." name="search">
+        <button type="submit">🔍</button>
+      </form>
+    </nav>
+  </header>
+
+  <div class="acerca-container">
+    <!-- Hero Section -->
+    <div class="acerca-hero">
+      <h1>Abedul</h1>
+      <p>Creamos muebles únicos que transforman espacios en hogares. Cada pieza es diseñada con pasión, elaborada con precisión y pensada para durar generaciones.</p>
+    </div>
+
+    <!-- Historia -->
+    <div class="acerca-section">
+      <h2 class="section-title">Nuestra Historia</h2>
+      <div class="historia-content">
+        <div class="historia-texto">
+          <p>Abedul nació de la pasión por la madera y el diseño. Lo que comenzó como un pequeño taller familiar, hoy es una marca reconocida por la calidad y elegancia de sus creaciones.</p>
+          <p>Cada mueble que fabricamos lleva consigo años de experiencia, técnicas tradicionales perfeccionadas y un compromiso inquebrantable con la excelencia. Trabajamos solo con maderas selectas, cuidadosamente elegidas por su calidad y durabilidad.</p>
+          <p>Nuestro equipo de artesanos combina métodos ancestrales con tecnología moderna para crear piezas que son tanto funcionales como obras de arte.</p>
+        </div>
+        <div class="historia-imagen">
+          <img src="Logo_Carpinteria-removebg-preview - copia.png" alt="Logo Abedul">
+        </div>
+      </div>
+    </div>
+
+    <!-- Misión y Visión -->
+    <div class="acerca-section">
+      <h2 class="section-title">Nuestra Filosofía</h2>
+      <div class="section-content">
+        <p><strong>Misión:</strong> Crear muebles excepcionales que eleven la experiencia de vivir, combinando artesanía tradicional con diseño contemporáneo para ofrecer piezas únicas que perduren en el tiempo.</p>
+        <br>
+        <p><strong>Visión:</strong> Ser la marca de referencia en muebles premium de madera, reconocida por nuestra innovación en diseño, compromiso con la calidad y respeto por el medio ambiente.</p>
+      </div>
+    </div>
+
+    <!-- Valores -->
+    <div class="acerca-section">
+      <h2 class="section-title">Nuestros Valores</h2>
+      <div class="valores-grid">
+        <div class="valor-card">
+          <div class="valor-icon">🎨</div>
+          <h3 class="valor-title">Diseño</h3>
+          <p class="valor-description">Creamos piezas únicas con un estilo minimalista y elegante que se adapta a espacios modernos.</p>
+        </div>
+        <div class="valor-card">
+          <div class="valor-icon">⭐</div>
+          <h3 class="valor-title">Calidad</h3>
+          <p class="valor-description">Utilizamos solo las mejores maderas y materiales para garantizar durabilidad y belleza.</p>
+        </div>
+        <div class="valor-card">
+          <div class="valor-icon">🔨</div>
+          <h3 class="valor-title">Artesanía</h3>
+          <p class="valor-description">Cada mueble es hecho a mano con técnicas tradicionales perfeccionadas a través de los años.</p>
+        </div>
+        <div class="valor-card">
+          <div class="valor-icon">🌱</div>
+          <h3 class="valor-title">Sostenibilidad</h3>
+          <p class="valor-description">Comprometidos con el medio ambiente, trabajamos con maderas de origen responsable.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta-section">
+      <h2>¿Listo para transformar tu espacio?</h2>
+      <p>Contáctanos y diseñemos juntos el mueble perfecto para ti</p>
+      <a href="https://wa.me/573022938898?text=Hola,%20me%20gustaría%20conocer%20más%20sobre%20sus%20muebles" target="_blank" class="btn-whatsapp">Contactar por WhatsApp</a>
+    </div>
+  </div>
+</body>
+<script src="buscador.js"></script>
+
+</html>
